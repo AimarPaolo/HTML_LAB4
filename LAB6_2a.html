@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <title>Esercizio 6.2a</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Paolo Rossi" >
+        <link rel=stylesheet href=es6.css>
+        <script type="text/javascript">
+            "use strict";
+            function modulo(np) {
+                return (np % 2);
+            }
+
+            function intero(np) {
+            return (np % 1);
+            }
+        </script>
+    </head>
+    <body>
+        <h1> Esercizio 6.2a </h1>
+
+        <script type="text/javascript">
+            "use strict";
+            var input, num;
+            var invalid = true;
+            do {
+            input = window.prompt("Inserire un numero:", "");
+            num = Number(input);
+
+            // se 'input' assume valore null o stringa vuota, significa che non
+            // è stato introdotto alcun valore dall'utente. Poiché entrambi tali valori
+            // sono "falsi", possiamo sinteticamente controllare che l'utente abbia
+            // inserito un valore con la seguente if
+            if(!input)
+                window.alert("Non hai inserito alcun numero!");
+            else if(isNaN(num))
+                window.alert("Non hai inserito un numero valido!");
+            else if((intero(num)) != 0)
+                window.alert("Inserire un numero intero!");
+            //in questo caso controllo che venga inserito un numero intero facendo num % 1
+            else {
+                document.writeln("<p>Il valore introdotto &egrave; " + num + ".</p>");
+
+                if(modulo(num) != 0)
+                document.writeln("<p>Il numero inserito &egrave; dispari.</p>");
+                else
+                document.writeln("<p>Il numero inserito &egrave; pari.</p>");
+
+                invalid = false;
+            }
+            } while(invalid);
+        </script>
+    </body>
+</html>

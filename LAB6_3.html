@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <title>Esercizio 6.3b</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Paolo Rossi" >
+        <link rel=stylesheet href=es6.css>
+        <script type="text/javascript">
+            "use strict";
+            function somma(a,b) {
+                var somma = a + b;
+                return somma;
+            }
+
+            function differenza(a,b) {
+                var diff = a - b;
+                return diff;
+            }
+        </script>
+    </head>
+    <body>
+        <h1> Esercizio 6.3b </h1>
+
+          <script type="text/javascript">
+            "use strict";
+            var nvalidi = false;
+            
+            do{
+                    var a = window.prompt("Inserire primo numero:", "");
+                    var b = window.prompt("Inserire secondo numero:", "");
+
+                    // verifica che siano stati inseriti i valori
+                    if ( (a == "") || ( b == "" ) ) {
+                        window.alert("Non hai inserito entrambi i valori");
+                    } else {
+                        var anum = parseInt(a); // gestiamo solo numeri interi usando parseInt() al posto di parseFloat()
+                        var bnum = parseInt(b);
+
+                        if (isNaN(anum) || isNaN(bnum) || anum != a || bnum != b){ // verifica che i valori siano numerici
+                                window.alert("I valori inseriti DEVONO essere numerici");
+                        } else {    // caso in cui tutte le verifiche abbiano avuto successo
+                                nvalidi = true; // aggiorno variabile condizione ciclo do-while
+                                var somma = somma(anum,bnum);
+                                var diff = differenza(anum,bnum);
+
+                                window.alert("Somma dei due numeri: "+somma);
+                                window.alert("Differenza dei due numeri: "+diff);
+                        }
+                    }
+            } while (!nvalidi);
+          </script>
+     </body>
+</html>
