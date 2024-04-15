@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+            <meta charset="utf-8">
+            <title>Esercizio 6.5</title>
+            <meta name="author" content="Aimar Paolo">
+            <script type="text/javascript">
+                "use strict"
+                function maiusc(stringa){
+                    return stringa.toUpperCase();
+                }
+                function benvenuto(){
+                    do{
+                        var nome = window.prompt("inserisci il tuo nome", "");
+                        if(nome == "" || nome == null){
+                        window.alert("inserisci il tuo nome dai!!!");
+                    }
+                    }while(nome == "" || nome == null);
+                    nome = maiusc(nome);
+                    document.writeln("Benvenuto "+nome+" nel mio umile sito!!");
+                    return true;
+                }
+            </script>
+    </head>
+    <body>
+        <h1>Esercizio 6.5</h1>
+        <script type="text/javascript">
+        benvenuto();
+        </script>
+    </body>
+</html>

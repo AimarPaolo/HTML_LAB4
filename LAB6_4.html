@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <title>Esercizio 6.4a</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Paolo Aimar" >
+        <script type="text/javascript">
+            "use strict";
+            function somma(a,b) {
+                return (a+b);
+            }
+
+            function differenza(a,b) {
+                return (a-b);
+            }
+        </script>
+    </head>
+    <body>
+         <h1> Esercizio 6.4a</h1>
+
+         <script type="text/javascript">
+            "use strict";
+            
+            var nvalidi = false;    
+                do{ 
+                         var a = window.prompt("Inserire primo numero:", "");
+                         var b = window.prompt("Inserire secondo numero:", "");
+                         // verifica che siano stati inseriti i valori
+                        if ((a == "") || ( b == "" )) {
+                                window.alert("Non hai inseriti entrambi i valori");
+                        } else {
+                                var anum = parseFloat(a);
+                                var bnum = parseFloat(b);
+                        if (isNaN(anum) || isNaN(bnum) || anum != a || bnum != b){ // verifica che i valori siano numerici
+                                window.alert("I valori inseriti DEVONO essere numerici");
+                       } else {
+                                 nvalidi = true; // aggiorno variabile condizione ciclo do-while
+                                 var somma = somma(anum,bnum);
+                                 var diff = differenza(anum,bnum); // nota: facendo la differenza tra numeri in floating point, il risultato puo' essere affetto da un errore di approssimazione considerando appunto che il formato floating point, per poter gestire un vastissimo range di valori, e' approssimato
+                                 document.writeln("<ul>");
+                                 document.writeln("<li>Il primo numero inserito &egrave; "+anum+".</li>");
+                                 document.writeln("<li>Il secondo numero inserito &egrave; "+bnum+".</li>");
+                                 document.writeln("<li>La somma dei due numeri &egrave; "+somma+".</li>");
+                                 document.writeln("<li>La differenza dei due numeri &egrave; "+diff+".</li>");
+                                 document.writeln("</ul>");
+                                }
+                        }
+               } while (!nvalidi);
+
+        </script>
+
+    </body>
+</html>

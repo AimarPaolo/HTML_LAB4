@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <title>Esercizio 6.6</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Paolo Aimar" >
+        <script type="text/javascript">
+            "use strict";
+            var nome = "";
+
+            function maiusc(stringa){
+                    return stringa.toUpperCase();
+                }
+
+            function showMessage(nome){
+                window.alert("Salve "+nome+", sono qui ai tuoi ordini!");
+            }
+
+            function benvenuto(){
+                nome = window.prompt("Inserisci qui il tuo nome: ", "");
+                nome = maiusc(nome);
+                document.writeln("Benvenuto <span onclick=\"showMessage(nome)\">"+nome+"</span> nel mio umile sito!");
+            }
+        </script>
+    </head>
+    <body>
+        <h1> Esercizio 6.6</h1>
+        <script>
+            "use strict";
+            benvenuto();
+        </script>
+    </body>
+</html>
