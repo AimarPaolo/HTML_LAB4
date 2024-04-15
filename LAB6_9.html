@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <title>Esercizio 6.5a</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Paolo Aimar" >
+        <link rel=stylesheet href=es6.css>
+        <script type="text/javascript">
+           "use strict";
+
+           function potenza(n) {           
+              document.writeln("<table>");            
+              document.writeln("<tr><th>N<sup></sup></th><th>N<sup>2</sup></th><th>N<sup>3</sup></th></tr>");
+
+              for (var i=1; i <= n; i++) {
+                  document.write("<tr>");
+                  document.write("<td>" + i + "</td>");
+                  document.write("<td>" + i*i + "</td>");
+                  document.write("<td>" + i*i*i + "</td>");
+                  document.writeln("</tr>");
+              }
+              document.writeln("</table>");
+                            
+        }
+            
+        </script>
+    </head>
+    <body>
+        <h1>Esercizio 6.5a</h1>
+       
+
+        <script type="text/javascript">
+           "use strict";
+
+           var nvalido = false;
+               
+               do {   
+
+                       var n = window.prompt("Inserisci numero:", "");
+                       if (n == "") {            
+                                window.alert("Errore - non hai inserito alcun valore");
+                       } else {
+                            var np = parseInt(n);
+                
+                            if (isNaN(np) || np != n){                         
+                                window.alert("Errore - inserito valore non numerico intero");
+                            } else {
+                                nvalido = true; // aggiorno variabile condizione ciclo do-while
+                         
+                                potenza(np);
+                            }
+                        }
+
+               } while (!nvalido);
+           
+        </script>
+
+    </body>
+</html>

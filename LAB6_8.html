@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <title>Esercizio 6.8</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Paolo Aimar" >
+        <script type="text/javascript">
+            "use strict";
+            var giorni = 0;
+            var tipoSpedizione = "";
+            var giorniSpedizione = 0
+            var flag = true
+
+            function throwWarning(giorniSpedizione, giorni){
+                window.alert("I giorni non sono sufficienti in quanto la consegna avverrebbe "+(giorniSpedizione - giorni)+" dopo");
+            }
+
+            function scegliSpedizione(){
+                
+                do{
+                    giorni = Number(window.prompt("Inserisci il numero di giorni entro i quali vuoi che venga effettuata la consegna"));
+                }while(giorni == "" || isNaN(giorni))
+                do{
+                    tipoSpedizione = window.prompt("Inserisci il tipo di spedizione che desideri utilizzare!, nel caso volessi uscire digita 'exit'", "");
+                    switch(tipoSpedizione.toLocaleLowerCase()){
+                        case "standard":
+                            giorniSpedizione = 30;
+                            if(giorniSpedizione>giorni){
+                                throwWarning(giorniSpedizione, giorni);
+                            }else{
+                                window.alert("La consegna può essere effettuata!");
+                            }
+                            break;
+                        case "express":
+                            giorniSpedizione = 7;
+                            if(giorniSpedizione>giorni){
+                                throwWarning(giorniSpedizione, giorni);
+                            }else{
+                                window.alert("La consegna può essere effettuata!");
+                            }
+                            break;
+                        case "gold":
+                            giorniSpedizione = 3;
+                            if(giorniSpedizione>giorni){
+                                throwWarning(giorniSpedizione, giorni);
+                            }else{
+                                window.alert("La consegna può essere effettuata!");
+                            }
+                            break;
+                        case "premium":
+                            giorniSpedizione = 1;
+                            if(giorniSpedizione>giorni){
+                                throwWarning(giorniSpedizione, giorni);
+                            }else{
+                                window.alert("La consegna può essere effettuata!");
+                            }
+                            break;
+                        case "exit":
+                            flag = false
+                            break;
+                    }
+                }while(flag);
+            }
+        </script>
+    </head>
+    <body>
+        <h1> Esercizio 6.8</h1>
+        <script>
+            "use strict";
+            scegliSpedizione();
+        </script>
+    </body>
+</html>

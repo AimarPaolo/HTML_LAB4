@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Esercizio 6.7</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Paolo Aimar">
+    </head>
+    <body>
+        <script type="text/javascript">
+            
+            var giorno = window.prompt("Inserisci il giorno della settimana:")
+            giorno = giorno.toLocaleLowerCase()
+
+            switch ( giorno ){
+                case "lunedì": 
+                    document.writeln("<p>Il giorno " + giorno + " è convertito in 1</p>"); 
+                    break;
+                case "martedì": 
+                    document.writeln("<p>Il giorno " + giorno + " è convertito in 2</p>"); 
+                    break;
+                case "mercoledì": 
+                    document.writeln("<p>Il giorno " + giorno + " è convertito in 3</p>"); 
+                    break;
+                case "giovedì": 
+                    document.writeln("<p>Il giorno " + giorno + " è convertito in 4</p>"); 
+                    break;
+                case "venerdì": 
+                    document.writeln("<p>Il giorno " + giorno + " è convertito in 5</p>"); 
+                    break;
+                case "sabato": 
+                    document.writeln("<p>Il giorno " + giorno + " è convertito in 6</p>"); 
+                    break;
+                case "domenica": 
+                    document.writeln("<p>Il giorno " + giorno + " è convertito in 7</p>"); 
+                    break;
+                default:
+                    document.writeln("<p>Inserisci un giorno della settimana valido!</p>"); 
+                    break;
+            }
+
+        </script>
+    </body>
+</html>
