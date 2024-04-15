@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8" > 
+        <title>Esercizio 6.2</title>
+        <meta name="author" content="Paolo Aimar">
+        <meta name="keywords" content="html">
+        <script>
+            "use strict";
+            function module(num){
+                return (num % 2);
+            }
+        </script>
+    </head>
+    <body>
+        <h1> Esercizio 6.2 </h1>
+        <script>
+        "use strict";
+        var n = window.prompt("inserisci il numero per controllare se è pari o dispari: ","");
+        var num = parseInt(n);
+
+        document.writeln("<p>il valore introdotto &egrave;: "+num+".</p>");
+        var modulo = module(num);
+        if(modulo == 0){
+            document.writeln("<p>il numero inserito &egrave pari.</p>");
+        }else{
+            document.writeln("<p>il numero inserito &egrave dispari.</p>");
+        }
+        </script>
+    </body>
+</html>
